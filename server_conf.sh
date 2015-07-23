@@ -10,4 +10,4 @@ SERVERCONF=~/aa/server/config/repo/server.conf
 
 sed -i 's/.*gunicorn_bind=localhost:..*/gunicorn_bind=0.0.0.0:17010/' $SERVERCONF
 
-sed -i "s/.*gunicorn_workers=.*/gunicorn_workers=$WORKERS/p" $SERVERCONF
+sed -i "s/.*gunicorn_workers=.*/gunicorn_workers=$WORKERS/g" $SERVERCONF
