@@ -20,3 +20,4 @@ cd $ar
 echo $(pwd)
 done
 
+x
