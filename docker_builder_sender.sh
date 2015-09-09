@@ -21,7 +21,7 @@ long_image_id=$(sudo docker inspect zetaops/$image_name | grep "Id" | cut -d ":"
 image_id=$(echo $long_image_id | cut -c 1-12)
 sudo docker tag $image_id  quay.io/zetaops/$image_name
 
-quay_name=$(sudo docker images | grep quay | awk '{ print $1 }')
+quay_name=$(sudo docker images | grep quay | cut -d " " -f1)
 docker push $quay_name
 
 fi
